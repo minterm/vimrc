@@ -18,8 +18,8 @@ colo darkblue
 set autochdir
 
 " -- remaps --
-noremap ff <Esc>
-noremap! ff <Esc>
+"noremap ff <Esc>
+"noremap! ff <Esc>
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 noremap! <F12> <Esc>:syntax sync fromstart<CR>
 
@@ -33,5 +33,9 @@ command Run execute "!start %"
 command SC execute "mksession! ~/current.vim" 
 "load current.vim
 command LC execute "source ~/current.vim" 
+"change tabs to spaces
+command TabToSpace execute "%s/\t/    /g"
+"change spaces to tabs
+command SpaceToTab execute "%s/    /\t/g" 
 
 " -- custom highlights --

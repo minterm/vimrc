@@ -39,3 +39,11 @@ command TabToSpace execute "%s/\t/    /g"
 command SpaceToTab execute "%s/    /\t/g" 
 
 " -- custom highlights --
+
+" -- set shell --
+if has("win16") || has("win32") || has("win64")
+    set shell=powershell
+    "set shellcmdflag=-command
+    "set shellquote=\"
+    "set shellxquote=
+endif
